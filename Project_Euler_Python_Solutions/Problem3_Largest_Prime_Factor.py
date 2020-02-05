@@ -19,8 +19,7 @@ class LargestPrimeFinder:
        
     @classmethod
     def find_greatest_prime_factor(self, integer):
-        for possible_factor in range(math.ceil(integer/2), 1, -1):
-            print(possible_factor)
+        for possible_factor in range(int(math.sqrt(integer)), 1, -1):
             if integer % possible_factor == 0:
                 if self.is_prime(possible_factor):
                     return possible_factor
